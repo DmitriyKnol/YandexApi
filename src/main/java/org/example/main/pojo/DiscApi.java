@@ -10,11 +10,12 @@ public class DiscApi {
     private static final String handlerFolder = "/disk/resources";
     Faker faker = new Faker();
     private String nameFolder = faker.funnyName().name();
+    private String token = "y0_AgAAAABonfR1AAkkkwAAAADcUFRn1JdGFatqSteYdye28RzLUDaWMN4";
     @Step("Создание папки")
     public Response createFolder() {
          Response response =
                 given()
-                        .header("Authorization", "y0_AgAAAABonfR1AAkkkwAAAADcUFRn1JdGFatqSteYdye28RzLUDaWMN4")
+                        .header("Authorization", token)
                         .param("path", nameFolder)
                         .when()
                         .put(handlerFolder);
@@ -23,7 +24,7 @@ public class DiscApi {
     @Step ("Удаление папки")
     public void deleteFolder() {
                 given()
-                        .header("Authorization", "y0_AgAAAABonfR1AAkkkwAAAADcUFRn1JdGFatqSteYdye28RzLUDaWMN4")
+                        .header("Authorization", token)
                         .param("path", nameFolder)
                         .when()
                         .delete(handlerFolder);
