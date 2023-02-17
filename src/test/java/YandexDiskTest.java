@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import jdk.jfr.Description;
@@ -19,6 +21,7 @@ public class YandexDiskTest extends BaseApi {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Создание новой папки")
     public void createFolderTest() {
         Response status = discApi.createFolder();

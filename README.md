@@ -15,4 +15,4 @@
 <li>Allure</li>
 
 </ul>
-<img src="src/main/resources/chrome_qUSqWhCPOt.png">
+<img src="src/main/resources/chrome_3BGkv9xfRe.png">
